@@ -74,14 +74,14 @@ export const MobileNav: React.FC = () => {
   };
 
   const drawerContent = (
-    <div className="fixed inset-0 z-[999] flex flex-col bg-white dark:bg-[#0A0A0A] text-foreground animate-in fade-in-0 duration-200">
+    <div className="fixed inset-0 z-[999] flex flex-col bg-white dark:bg-card text-foreground animate-in fade-in-0 duration-200">
       {/* Top Bar of Drawer */}
-      <div className="flex h-20 shrink-0 items-center justify-between border-b border-border/80 px-5 bg-white dark:bg-[#0A0A0A]">
+      <div className="flex h-20 shrink-0 items-center justify-between border-b border-border/80 px-5 bg-white dark:bg-card">
         <Logo variant="compact" />
         <button
           type="button"
           onClick={closeMenu}
-          className="inline-flex size-10 items-center justify-center rounded-xl border border-border/80 bg-muted/40 p-2 text-muted-foreground hover:text-[#C5A059] hover:border-[#C5A059]/40 transition-colors cursor-pointer"
+          className="inline-flex size-10 items-center justify-center rounded-xl border border-border/80 bg-muted/40 p-2 text-muted-foreground hover:text-primary hover:border-[#C5A059]/40 transition-colors cursor-pointer"
           aria-label="Close menu"
         >
           <X className="size-5" />
@@ -89,7 +89,7 @@ export const MobileNav: React.FC = () => {
       </div>
 
       {/* Scrollable Content */}
-      <div className="flex-1 overflow-y-auto px-5 py-6 space-y-6 bg-white dark:bg-[#0A0A0A]">
+      <div className="flex-1 overflow-y-auto px-5 py-6 space-y-6 bg-white dark:bg-card">
         {/* Primary Action Button in Metallic Gold & Black */}
         <Link
           href="/contact"
@@ -110,12 +110,12 @@ export const MobileNav: React.FC = () => {
               className="flex w-full items-center justify-between p-4 text-sm font-semibold text-foreground bg-muted/40 hover:bg-muted/60 transition-colors cursor-pointer"
             >
               <span className="flex items-center gap-2.5">
-                <Code2 className="size-4.5 text-[#C5A059]" />
+                <Code2 className="size-4.5 text-primary" />
                 Services & Solutions
               </span>
               <ChevronDown
                 className={`size-4 text-muted-foreground transition-transform duration-200 ${
-                  openSection === "services" ? "rotate-180 text-[#C5A059]" : ""
+                  openSection === "services" ? "rotate-180 text-primary" : ""
                 }`}
               />
             </button>
@@ -129,7 +129,7 @@ export const MobileNav: React.FC = () => {
                       key={service.title}
                       href={service.href}
                       onClick={closeMenu}
-                      className="flex items-center gap-3 rounded-xl p-2.5 hover:bg-[#FAF3E0]/60 dark:hover:bg-neutral-800 transition-colors text-xs font-medium text-foreground hover:text-[#C5A059]"
+                      className="flex items-center gap-3 rounded-xl p-2.5 hover:bg-[#FAF3E0]/60 dark:hover:bg-neutral-800 transition-colors text-xs font-medium text-foreground hover:text-primary"
                     >
                       <Icon className="size-4 text-muted-foreground" />
                       <span>{service.title}</span>
@@ -148,12 +148,12 @@ export const MobileNav: React.FC = () => {
               className="flex w-full items-center justify-between p-4 text-sm font-semibold text-foreground bg-muted/40 hover:bg-muted/60 transition-colors cursor-pointer"
             >
               <span className="flex items-center gap-2.5">
-                <Building2 className="size-4.5 text-[#C5A059]" />
+                <Building2 className="size-4.5 text-primary" />
                 Company & Culture
               </span>
               <ChevronDown
                 className={`size-4 text-muted-foreground transition-transform duration-200 ${
-                  openSection === "company" ? "rotate-180 text-[#C5A059]" : ""
+                  openSection === "company" ? "rotate-180 text-primary" : ""
                 }`}
               />
             </button>
@@ -167,7 +167,7 @@ export const MobileNav: React.FC = () => {
                       key={link.title}
                       href={link.href}
                       onClick={closeMenu}
-                      className="flex items-center justify-between rounded-xl p-2.5 hover:bg-[#FAF3E0]/60 dark:hover:bg-neutral-800 text-xs font-medium text-foreground hover:text-[#C5A059] transition-colors"
+                      className="flex items-center justify-between rounded-xl p-2.5 hover:bg-[#FAF3E0]/60 dark:hover:bg-neutral-800 text-xs font-medium text-foreground hover:text-primary transition-colors"
                     >
                       <span className="flex items-center gap-3">
                         <Icon className="size-4 text-muted-foreground" />
@@ -190,7 +190,7 @@ export const MobileNav: React.FC = () => {
             <Link
               href="/industries"
               onClick={closeMenu}
-              className="flex items-center justify-between p-4 text-sm font-medium text-foreground hover:text-[#C5A059] hover:bg-muted/40 transition-colors"
+              className="flex items-center justify-between p-4 text-sm font-medium text-foreground hover:text-primary hover:bg-muted/40 transition-colors"
             >
               <span>Industries</span>
               <ArrowRight className="size-4 text-muted-foreground" />
@@ -198,7 +198,7 @@ export const MobileNav: React.FC = () => {
             <Link
               href="/case-studies"
               onClick={closeMenu}
-              className="flex items-center justify-between p-4 text-sm font-medium text-foreground hover:text-[#C5A059] hover:bg-muted/40 transition-colors"
+              className="flex items-center justify-between p-4 text-sm font-medium text-foreground hover:text-primary hover:bg-muted/40 transition-colors"
             >
               <span>Case Studies & Portfolio</span>
               <ArrowRight className="size-4 text-muted-foreground" />
@@ -206,7 +206,7 @@ export const MobileNav: React.FC = () => {
             <Link
               href="/insights"
               onClick={closeMenu}
-              className="flex items-center justify-between p-4 text-sm font-medium text-foreground hover:text-[#C5A059] hover:bg-muted/40 transition-colors"
+              className="flex items-center justify-between p-4 text-sm font-medium text-foreground hover:text-primary hover:bg-muted/40 transition-colors"
             >
               <span>Insights & Articles</span>
               <ArrowRight className="size-4 text-muted-foreground" />
@@ -214,7 +214,7 @@ export const MobileNav: React.FC = () => {
             <Link
               href="/contact"
               onClick={closeMenu}
-              className="flex items-center justify-between p-4 text-sm font-medium text-foreground hover:text-[#C5A059] hover:bg-muted/40 transition-colors"
+              className="flex items-center justify-between p-4 text-sm font-medium text-foreground hover:text-primary hover:bg-muted/40 transition-colors"
             >
               <span>Contact Us</span>
               <ArrowRight className="size-4 text-muted-foreground" />
@@ -226,7 +226,7 @@ export const MobileNav: React.FC = () => {
       {/* Mobile Footer Status */}
       <div className="shrink-0 border-t border-border/80 p-4 bg-muted/40 dark:bg-black flex items-center justify-between text-xs text-muted-foreground">
         <span className="font-medium text-foreground">9X Technology &bull; Gold Standards</span>
-        <span className="text-[#C5A059] font-semibold">Worldwide</span>
+        <span className="text-primary font-semibold">Worldwide</span>
       </div>
     </div>
   );
@@ -238,7 +238,7 @@ export const MobileNav: React.FC = () => {
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="inline-flex size-10 items-center justify-center rounded-xl border border-border/80 bg-background/80 p-2 text-muted-foreground hover:text-[#C5A059] hover:border-[#C5A059]/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A059]/40 transition-colors cursor-pointer"
+        className="inline-flex size-10 items-center justify-center rounded-xl border border-border/80 bg-background/80 p-2 text-muted-foreground hover:text-primary hover:border-[#C5A059]/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A059]/40 transition-colors cursor-pointer"
         aria-label={isOpen ? "Close menu" : "Open menu"}
         aria-expanded={isOpen}
       >

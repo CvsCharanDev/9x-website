@@ -28,9 +28,9 @@ const HeaderComponent: React.FC = () => {
             <Link href="/contact" className="inline-flex">
               <button
                 type="button"
-                className="group relative flex items-center gap-1.5 sm:gap-2 h-9 sm:h-9.5 md:h-10 2xl:h-11 3xl:h-[48px] 4xl:h-[56px] px-3.5 sm:px-4 xl:px-4.5 2xl:px-6 3xl:px-7 4xl:px-8 rounded-full bg-neutral-950 dark:bg-white text-white dark:text-neutral-950 text-xs 2xl:text-sm 3xl:text-base 4xl:text-lg font-semibold tracking-wide border border-[#C5A059]/40 hover:border-[#C5A059] shadow-sm hover:shadow-[0_0_20px_rgba(212,175,55,0.35)] transition-all duration-300 cursor-pointer active:scale-95"
+                className="group relative flex items-center gap-1.5 sm:gap-2 h-9 sm:h-9.5 md:h-10 2xl:h-11 3xl:h-[48px] 4xl:h-[56px] px-3.5 sm:px-4 xl:px-4.5 2xl:px-6 3xl:px-7 4xl:px-8 rounded-full bg-neutral-950 dark:bg-white text-white dark:text-neutral-950 text-xs 2xl:text-sm 3xl:text-base 4xl:text-lg font-semibold tracking-wide border border-primary/40 hover:border-primary shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer active:scale-95"
               >
-                <Sparkles className="size-3.5 2xl:size-4 3xl:size-4.5 4xl:size-5 text-[#C5A059] transition-transform duration-300 group-hover:rotate-12" />
+                <Sparkles className="size-3.5 2xl:size-4 3xl:size-4.5 4xl:size-5 text-primary transition-transform duration-300 group-hover:rotate-12" />
                 <span>Connect</span>
               </button>
             </Link>

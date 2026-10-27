@@ -44,20 +44,16 @@ export const ThemeToggle: React.FC<{ className?: string }> = ({ className = "" }
       type="button"
       onClick={toggleTheme}
       aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
-      className={`relative inline-flex size-9 sm:size-9.5 md:size-10 2xl:size-11 3xl:size-[48px] 4xl:size-[56px] items-center justify-center rounded-full border border-neutral-200/80 dark:border-neutral-800 bg-white/80 dark:bg-neutral-900/80 hover:bg-white dark:hover:bg-neutral-900 text-muted-foreground hover:text-foreground hover:border-[#C5A059]/60 shadow-xs transition-all duration-200 cursor-pointer active:scale-95 ${className}`}
+      className={`relative inline-flex size-9 sm:size-9.5 md:size-10 2xl:size-11 3xl:size-[48px] 4xl:size-[56px] items-center justify-center rounded-full border border-border bg-background/80 hover:bg-background text-muted-foreground hover:text-foreground hover:border-primary/60 shadow-xs transition-all duration-200 cursor-pointer active:scale-95 ${className}`}
     >
       <Sun
         className={`size-3.5 sm:size-4 2xl:size-4.5 3xl:size-5 4xl:size-6 transition-all duration-300 absolute ${
-          isDark
-            ? "rotate-90 scale-0 opacity-0"
-            : "rotate-0 scale-100 opacity-100 text-[#C5A059]"
+          isDark ? "rotate-90 scale-0 opacity-0" : "rotate-0 scale-100 opacity-100 text-primary"
         }`}
       />
       <Moon
         className={`size-3.5 sm:size-4 2xl:size-4.5 3xl:size-5 4xl:size-6 transition-all duration-300 absolute ${
-          isDark
-            ? "rotate-0 scale-100 opacity-100 text-[#E5C158]"
-            : "-rotate-90 scale-0 opacity-0"
+          isDark ? "rotate-0 scale-100 opacity-100 text-primary" : "-rotate-90 scale-0 opacity-0"
         }`}
       />
       <span className="sr-only">Toggle theme</span>

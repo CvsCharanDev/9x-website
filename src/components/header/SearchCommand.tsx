@@ -28,7 +28,8 @@ const SEARCH_ITEMS: SearchResultItem[] = [
     id: "getting-started",
     title: "Quickstart & Setup",
     category: "Documentation",
-    description: "Install SDKs, configure API credentials, and send your first request in 5 minutes.",
+    description:
+      "Install SDKs, configure API credentials, and send your first request in 5 minutes.",
     icon: Zap,
     url: "/docs/quickstart",
   },
@@ -79,7 +80,10 @@ function emptySubscribe() {
 }
 
 function getIsMac() {
-  return typeof navigator !== "undefined" && /(Mac|iPhone|iPod|iPad)/i.test(navigator.userAgent || navigator.platform);
+  return (
+    typeof navigator !== "undefined" &&
+    /(Mac|iPhone|iPod|iPad)/i.test(navigator.userAgent || navigator.platform)
+  );
 }
 
 function getServerIsMac() {
@@ -168,11 +172,7 @@ export const SearchCommand: React.FC<{ className?: string }> = ({ className = ""
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4 bg-black/60 backdrop-blur-xs animate-in fade-in-0 duration-200">
           {/* Backdrop Click */}
-          <div
-            className="fixed inset-0"
-            onClick={closeModal}
-            aria-hidden="true"
-          />
+          <div className="fixed inset-0" onClick={closeModal} aria-hidden="true" />
 
           {/* Modal Container */}
           <div className="relative w-full max-w-xl rounded-xl border border-border/80 bg-background shadow-2xl overflow-hidden transition-all duration-200 animate-in zoom-in-95">
@@ -224,7 +224,8 @@ export const SearchCommand: React.FC<{ className?: string }> = ({ className = ""
             <div className="max-h-[340px] overflow-y-auto p-2">
               {filteredItems.length === 0 ? (
                 <div className="py-12 text-center text-xs text-muted-foreground">
-                  No results found for &ldquo;<span className="text-foreground">{query}</span>&rdquo;.
+                  No results found for &ldquo;<span className="text-foreground">{query}</span>
+                  &rdquo;.
                 </div>
               ) : (
                 <div className="space-y-1">

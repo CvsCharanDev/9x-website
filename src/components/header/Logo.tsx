@@ -8,10 +8,7 @@ interface LogoProps {
 }
 
 export const Logo: React.FC<LogoProps> = ({ className = "", variant = "default" }) => {
-  const heightClass =
-    variant === "compact"
-      ? "h-6 sm:h-7"
-      : "h-7 md:h-8 4xl:h-[52px]";
+  const heightClass = variant === "compact" ? "h-6 sm:h-7" : "h-7 md:h-8 4xl:h-[52px]";
 
   return (
     <Link
