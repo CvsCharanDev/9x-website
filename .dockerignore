@@ -1,0 +1,14 @@
+Dockerfile
+docker-compose.yml
+.dockerignore
+node_modules
+.next
+.git
+.husky
+.gemini
+docs
+*.log
+.env*.local
+README.md
+CLAUDE.md
+AGENTS.md
