@@ -1,4 +1,3 @@
-import React from "react";
 import type { Metadata } from "next";
 import { CheckCircle2 } from "lucide-react";
 import Container from "@/components/layout/Container";

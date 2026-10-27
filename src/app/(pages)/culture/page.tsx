@@ -1,4 +1,3 @@
-import React from "react";
 import type { Metadata } from "next";
 import { Sparkles } from "lucide-react";
 import Container from "@/components/layout/Container";

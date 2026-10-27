@@ -1,4 +1,3 @@
-import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, MapPin } from "lucide-react";

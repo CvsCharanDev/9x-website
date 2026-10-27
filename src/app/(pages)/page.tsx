@@ -1,4 +1,3 @@
-import React from "react";
 import HeroSection from "@/components/sections/HeroSection";
 import MetricsSection from "@/components/sections/MetricsSection";
 import ServicesGrid from "@/components/sections/ServicesGrid";

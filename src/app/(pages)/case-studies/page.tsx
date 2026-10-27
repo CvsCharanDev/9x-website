@@ -1,4 +1,3 @@
-import React from "react";
 import type { Metadata } from "next";
 import Container from "@/components/layout/Container";
 import SectionHeading from "@/components/shared/SectionHeading";

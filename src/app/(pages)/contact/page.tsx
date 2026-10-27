@@ -1,4 +1,3 @@
-import React from "react";
 import type { Metadata } from "next";
 import { Mail, MapPin, ShieldCheck, Clock, CheckCircle2, Send } from "lucide-react";
 import Container from "@/components/layout/Container";
