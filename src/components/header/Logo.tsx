@@ -11,7 +11,7 @@ export const Logo: React.FC<LogoProps> = ({ className = "", variant = "default" 
   const heightClass =
     variant === "compact"
       ? "h-6 sm:h-7"
-      : "h-7 sm:h-8 md:h-9 2xl:h-10 3xl:h-[48px] 4xl:h-[58px]";
+      : "h-7 md:h-8 4xl:h-[52px]";
 
   return (
     <Link

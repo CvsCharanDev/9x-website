@@ -129,7 +129,7 @@ export const DesktopNav: React.FC = () => {
   return (
     <nav
       ref={navRef}
-      className="hidden lg:flex items-center gap-1 xl:gap-2 2xl:gap-3.5 3xl:gap-5 4xl:gap-6 px-5 py-1.5 2xl:px-7 2xl:py-2.5 3xl:px-9 3xl:py-3 4xl:px-11 4xl:py-3.5 rounded-full bg-white/70 dark:bg-neutral-900/60 border border-white/80 dark:border-neutral-800 shadow-[inset_0_1px_2px_rgba(255,255,255,0.7)] dark:shadow-none text-xs xl:text-sm 2xl:text-base 3xl:text-lg 4xl:text-xl font-medium backdrop-blur-md"
+      className="hidden lg:flex items-center gap-0.5 4xl:gap-6 px-3.5 py-1 xl:px-4.5 xl:py-1 2xl:px-6 2xl:py-2 3xl:px-8 3xl:py-2.5 4xl:px-10 4xl:py-3 rounded-full bg-white/70 dark:bg-neutral-900/60 border border-white/80 dark:border-neutral-800 shadow-[inset_0_1px_2px_rgba(255,255,255,0.7)] dark:shadow-none text-xs xl:text-[13px] 2xl:text-sm 3xl:text-base 4xl:text-lg font-medium backdrop-blur-md"
     >
       {/* Services Dropdown */}
       <div
@@ -140,7 +140,7 @@ export const DesktopNav: React.FC = () => {
         <button
           type="button"
           onClick={() => setActiveMenu(activeMenu === "services" ? null : "services")}
-          className={`flex items-center gap-1.5 px-3 py-1.5 2xl:px-4 2xl:py-2 3xl:px-5 3xl:py-2.5 4xl:px-6 4xl:py-3 rounded-full text-xs xl:text-sm 2xl:text-base 3xl:text-lg 4xl:text-xl transition-all duration-200 cursor-pointer ${
+          className={`flex items-center gap-1.5 px-2.5 py-1 xl:px-3 xl:py-1 2xl:px-3.5 2xl:py-1.5 3xl:px-4.5 3xl:py-2 4xl:px-5.5 4xl:py-2.5 rounded-full text-xs xl:text-[13px] 2xl:text-sm 3xl:text-base 4xl:text-lg transition-all duration-200 cursor-pointer ${
             activeMenu === "services"
               ? "text-[#C5A059] bg-[#C5A059]/10 font-semibold"
               : "text-muted-foreground hover:text-foreground hover:bg-black/5 dark:hover:bg-white/5"
@@ -156,7 +156,7 @@ export const DesktopNav: React.FC = () => {
         </button>
 
         {activeMenu === "services" && (
-          <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 z-50 w-[600px] 2xl:w-[720px] 3xl:w-[840px] 4xl:w-[980px] animate-in fade-in-0 zoom-in-95 duration-150">
+          <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 z-50 w-[580px] 2xl:w-[700px] 3xl:w-[820px] 4xl:w-[960px] animate-in fade-in-0 zoom-in-95 duration-150">
             <div className="rounded-2xl border border-border/80 bg-white dark:bg-[#0A0A0A] p-5 2xl:p-6 3xl:p-7 4xl:p-8 shadow-2xl ring-1 ring-[#C5A059]/15">
               <div className="flex items-center justify-between pb-3 mb-3 border-b border-border/60">
                 <span className="text-xs 2xl:text-sm 3xl:text-base font-semibold uppercase tracking-wider text-[#C5A059]">
@@ -237,7 +237,7 @@ export const DesktopNav: React.FC = () => {
         <button
           type="button"
           onClick={() => setActiveMenu(activeMenu === "industries" ? null : "industries")}
-          className={`flex items-center gap-1.5 px-3 py-1.5 2xl:px-4 2xl:py-2 3xl:px-5 3xl:py-2.5 4xl:px-6 4xl:py-3 rounded-full text-xs xl:text-sm 2xl:text-base 3xl:text-lg 4xl:text-xl transition-all duration-200 cursor-pointer ${
+          className={`flex items-center gap-1.5 px-2.5 py-1 xl:px-3 xl:py-1 2xl:px-3.5 2xl:py-1.5 3xl:px-4.5 3xl:py-2 4xl:px-5.5 4xl:py-2.5 rounded-full text-xs xl:text-[13px] 2xl:text-sm 3xl:text-base 4xl:text-lg transition-all duration-200 cursor-pointer ${
             activeMenu === "industries"
               ? "text-[#C5A059] bg-[#C5A059]/10 font-semibold"
               : "text-muted-foreground hover:text-foreground hover:bg-black/5 dark:hover:bg-white/5"
@@ -253,7 +253,7 @@ export const DesktopNav: React.FC = () => {
         </button>
 
         {activeMenu === "industries" && (
-          <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 z-50 w-[400px] 2xl:w-[480px] 3xl:w-[560px] 4xl:w-[640px] animate-in fade-in-0 zoom-in-95 duration-150">
+          <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 z-50 w-[380px] xl:w-[400px] 2xl:w-[480px] 3xl:w-[560px] 4xl:w-[640px] animate-in fade-in-0 zoom-in-95 duration-150">
             <div className="rounded-2xl border border-border/80 bg-white dark:bg-[#0A0A0A] p-4 2xl:p-5 3xl:p-6 shadow-2xl ring-1 ring-[#C5A059]/15 space-y-1">
               <div className="pb-2 px-2 text-xs 2xl:text-sm 3xl:text-base font-semibold uppercase tracking-wider text-[#C5A059] border-b border-border/60">
                 Industries We Empower
@@ -281,7 +281,7 @@ export const DesktopNav: React.FC = () => {
       {/* Case Studies */}
       <Link
         href="/case-studies"
-        className="px-3 py-1.5 2xl:px-4 2xl:py-2 3xl:px-5 3xl:py-2.5 4xl:px-6 4xl:py-3 rounded-full text-xs xl:text-sm 2xl:text-base 3xl:text-lg 4xl:text-xl text-muted-foreground hover:text-[#C5A059] hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+        className="px-2.5 py-1 xl:px-3 xl:py-1 2xl:px-3.5 2xl:py-1.5 3xl:px-4.5 3xl:py-2 4xl:px-5.5 4xl:py-2.5 rounded-full text-xs xl:text-[13px] 2xl:text-sm 3xl:text-base 4xl:text-lg text-muted-foreground hover:text-[#C5A059] hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
       >
         Case Studies
       </Link>
@@ -295,7 +295,7 @@ export const DesktopNav: React.FC = () => {
         <button
           type="button"
           onClick={() => setActiveMenu(activeMenu === "company" ? null : "company")}
-          className={`flex items-center gap-1.5 px-3 py-1.5 2xl:px-4 2xl:py-2 3xl:px-5 3xl:py-2.5 4xl:px-6 4xl:py-3 rounded-full text-xs xl:text-sm 2xl:text-base 3xl:text-lg 4xl:text-xl transition-all duration-200 cursor-pointer ${
+          className={`flex items-center gap-1.5 px-2.5 py-1 xl:px-3 xl:py-1 2xl:px-3.5 2xl:py-1.5 3xl:px-4.5 3xl:py-2 4xl:px-5.5 4xl:py-2.5 rounded-full text-xs xl:text-[13px] 2xl:text-sm 3xl:text-base 4xl:text-lg transition-all duration-200 cursor-pointer ${
             activeMenu === "company"
               ? "text-[#C5A059] bg-[#C5A059]/10 font-semibold"
               : "text-muted-foreground hover:text-foreground hover:bg-black/5 dark:hover:bg-white/5"
@@ -311,7 +311,7 @@ export const DesktopNav: React.FC = () => {
         </button>
 
         {activeMenu === "company" && (
-          <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 z-50 w-[360px] 2xl:w-[440px] 3xl:w-[520px] 4xl:w-[600px] animate-in fade-in-0 zoom-in-95 duration-150">
+          <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 z-50 w-[340px] xl:w-[360px] 2xl:w-[440px] 3xl:w-[520px] 4xl:w-[600px] animate-in fade-in-0 zoom-in-95 duration-150">
             <div className="rounded-2xl border border-border/80 bg-white dark:bg-[#0A0A0A] p-3 2xl:p-4 3xl:p-5 shadow-2xl ring-1 ring-[#C5A059]/15 space-y-1">
               {COMPANY_LINKS.map((link) => {
                 const Icon = link.icon;
@@ -351,7 +351,7 @@ export const DesktopNav: React.FC = () => {
       {/* Careers */}
       <Link
         href="/careers"
-        className="px-3 py-1.5 2xl:px-4 2xl:py-2 3xl:px-5 3xl:py-2.5 4xl:px-6 4xl:py-3 rounded-full text-xs xl:text-sm 2xl:text-base 3xl:text-lg 4xl:text-xl text-muted-foreground hover:text-[#C5A059] hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+        className="px-2.5 py-1 xl:px-3 xl:py-1 2xl:px-3.5 2xl:py-1.5 3xl:px-4.5 3xl:py-2 4xl:px-5.5 4xl:py-2.5 rounded-full text-xs xl:text-[13px] 2xl:text-sm 3xl:text-base 4xl:text-lg text-muted-foreground hover:text-[#C5A059] hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
       >
         Careers
       </Link>
@@ -359,7 +359,7 @@ export const DesktopNav: React.FC = () => {
       {/* Insights */}
       <Link
         href="/insights"
-        className="px-3 py-1.5 2xl:px-4 2xl:py-2 3xl:px-5 3xl:py-2.5 4xl:px-6 4xl:py-3 rounded-full text-xs xl:text-sm 2xl:text-base 3xl:text-lg 4xl:text-xl text-muted-foreground hover:text-[#C5A059] hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+        className="px-2.5 py-1 xl:px-3 xl:py-1 2xl:px-3.5 2xl:py-1.5 3xl:px-4.5 3xl:py-2 4xl:px-5.5 4xl:py-2.5 rounded-full text-xs xl:text-[13px] 2xl:text-sm 3xl:text-base 4xl:text-lg text-muted-foreground hover:text-[#C5A059] hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
       >
         Insights
       </Link>
