@@ -8,37 +8,38 @@ import MenuDrawer from "./MenuDrawer";
 
 const HeaderComponent: React.FC = () => {
   return (
-    <div className="sticky top-3 sm:top-5 z-50 w-full px-3 sm:px-6 pointer-events-none">
-      <header className="pointer-events-auto mx-auto max-w-7xl h-18 sm:h-20 rounded-full px-2.5 sm:px-4 flex items-center justify-between gap-2 sm:gap-4 bg-white/70 dark:bg-[#0A0A0A]/70 backdrop-blur-2xl backdrop-saturate-150 border border-white/80 dark:border-white/10 shadow-[0_10px_35px_-5px_rgba(0,0,0,0.08)] dark:shadow-[0_10px_35px_-5px_rgba(0,0,0,0.5)] transition-all">
-        {/* Left: Circular Menu Button + 9X Technology Official Logo */}
-        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-          {/* Circular Hamburger Button matching Infosys navbar */}
-          <MenuDrawer />
-
-          {/* Official 9X Technology Gold Logo */}
+    <div className="sticky top-3 sm:top-5 2xl:top-6 3xl:top-7 4xl:top-8 z-50 w-full px-3 sm:px-6 2xl:px-8 3xl:px-10 4xl:px-12 pointer-events-none">
+      <header className="pointer-events-auto mx-auto max-w-7xl 2xl:max-w-[1560px] 3xl:max-w-[1980px] 4xl:max-w-[2450px] 5xl:max-w-[2580px] h-16 sm:h-20 2xl:h-[88px] 3xl:h-[98px] 4xl:h-[112px] rounded-full px-4 sm:px-6 2xl:px-8 3xl:px-10 4xl:px-12 flex items-center justify-between gap-4 2xl:gap-6 3xl:gap-8 bg-white/70 dark:bg-[#0A0A0A]/70 backdrop-blur-2xl backdrop-saturate-150 border border-white/80 dark:border-white/10 shadow-[0_10px_35px_-5px_rgba(0,0,0,0.08)] dark:shadow-[0_10px_35px_-5px_rgba(0,0,0,0.5)] transition-all">
+        {/* Left: 9X Technology Logo (Mobile and Desktop) */}
+        <div className="flex items-center shrink-0">
           <Logo />
         </div>
 
-        {/* Center: Inner Floating Pill with Navigation Links */}
-        <div className="hidden lg:flex items-center justify-center flex-1 mx-2">
+        {/* Center: Desktop Navigation Links (Desktop only) */}
+        <div className="hidden lg:flex items-center justify-center flex-1 mx-2 2xl:mx-4 3xl:mx-6">
           <DesktopNav />
         </div>
 
-        {/* Right: Theme Toggle & High-Contrast Connect Pill Button */}
-        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-          {/* Theme Switcher */}
-          <ThemeToggle />
+        {/* Right Section */}
+        <div className="flex items-center shrink-0">
+          {/* Desktop Utilities: Theme Toggle & Connect Button (Hidden on Mobile) */}
+          <div className="hidden lg:flex items-center gap-3 2xl:gap-4 3xl:gap-5 4xl:gap-6">
+            <ThemeToggle />
+            <Link href="/contact" className="inline-flex">
+              <button
+                type="button"
+                className="group relative flex items-center gap-2 2xl:gap-2.5 3xl:gap-3 h-10 sm:h-11 2xl:h-12 3xl:h-[52px] 4xl:h-[60px] px-5 2xl:px-6 3xl:px-8 4xl:px-9 rounded-full bg-neutral-950 dark:bg-white text-white dark:text-neutral-950 text-xs sm:text-sm 2xl:text-base 3xl:text-lg 4xl:text-xl font-semibold tracking-wide border border-[#C5A059]/40 hover:border-[#C5A059] shadow-sm hover:shadow-[0_0_20px_rgba(212,175,55,0.35)] transition-all duration-300 cursor-pointer active:scale-95"
+              >
+                <Sparkles className="size-3.5 2xl:size-4.5 3xl:size-5 4xl:size-6 text-[#C5A059] transition-transform duration-300 group-hover:rotate-12" />
+                <span>Connect</span>
+              </button>
+            </Link>
+          </div>
 
-          {/* Connect Capsule Button matching Infosys 'Ask Leon' style */}
-          <Link href="/contact" className="inline-flex">
-            <button
-              type="button"
-              className="group relative flex items-center gap-2 h-10 sm:h-11 px-4 sm:px-5 rounded-full bg-neutral-950 dark:bg-white text-white dark:text-neutral-950 text-xs sm:text-sm font-semibold tracking-wide border border-[#C5A059]/40 hover:border-[#C5A059] shadow-sm hover:shadow-[0_0_20px_rgba(212,175,55,0.35)] transition-all duration-300 cursor-pointer active:scale-95"
-            >
-              <Sparkles className="size-3.5 text-[#C5A059] transition-transform duration-300 group-hover:rotate-12" />
-              <span>Connect</span>
-            </button>
-          </Link>
+          {/* Mobile Right: Menu button only */}
+          <div className="lg:hidden flex items-center">
+            <MenuDrawer />
+          </div>
         </div>
       </header>
     </div>

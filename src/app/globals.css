@@ -41,6 +41,9 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  --breakpoint-3xl: 120rem;
+  --breakpoint-4xl: 150rem;
+  --breakpoint-5xl: 165rem;
 }
 
 :root {
@@ -98,4 +101,60 @@
   html {
     @apply font-sans;
   }
+}
+
+@keyframes drawerSlideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes drawerSlideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes backdropFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes backdropFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.drawer-slide-in-right {
+  animation: drawerSlideInRight 320ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform;
+}
+
+.drawer-slide-out-right {
+  animation: drawerSlideOutRight 240ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  will-change: transform;
+}
+
+.backdrop-fade-in {
+  animation: backdropFadeIn 300ms ease-out forwards;
+  will-change: opacity;
+}
+
+.backdrop-fade-out {
+  animation: backdropFadeOut 240ms ease-in forwards;
+  will-change: opacity;
 }
