@@ -1,6 +1,7 @@
 import HeroSection from "@/components/sections/HeroSection";
 import MetricsSection from "@/components/sections/MetricsSection";
 import ServicesGrid from "@/components/sections/ServicesGrid";
+import WhatWeveBuiltSection from "@/components/sections/WhatWeveBuiltSection";
 import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
 import CaseStudyCards from "@/components/sections/CaseStudyCards";
 import CtaBanner from "@/components/sections/CtaBanner";
@@ -17,10 +18,13 @@ export default function Home() {
       {/* 3. Core Capabilities Grid (Software, FinTech, AI, Cloud, Mobile, Security) */}
       <ServicesGrid />
 
-      {/* 4. The 9X Advantage & Engineering Pillars */}
+      {/* 4. What We've Built - Interactive Expanding Products Carousel */}
+      <WhatWeveBuiltSection />
+
+      {/* 5. The 9X Advantage & Engineering Pillars */}
       <WhyChooseUsSection />
 
-      {/* 5. Proven Client Case Studies & Impact Testimonials */}
+      {/* 6. Proven Client Case Studies & Impact Testimonials */}
       <CaseStudyCards limit={3} />
 
       {/* 6. High-Conversion Architecture Consultation CTA */}
